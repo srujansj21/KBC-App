@@ -1,0 +1,256 @@
+.app {
+    height: 100vh;
+    display: flex;
+    color: white;
+    background: url(http://s1.picswalls.com/wallpapers/2014/08/11/awesome-money-wallpaper_090605350_192.jpg);
+    background-color: #020230;
+    background-size: cover;
+    height: 100vh;
+  }
+  
+  .main {
+    width: 75%;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0), #020230),
+      url("https://i.ytimg.com/vi/yQbJRGs0fy8/maxresdefault.jpg") center;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .pyramid {
+    width: 25%;
+    background-color: #020230;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .moneyList {
+    padding: 20px;
+    list-style: none;
+    width: 100%;
+  }
+  
+  .moneyListItem {
+    display: flex;
+    align-items: center;
+    padding: 5px;
+    border-radius: 5px;
+  }
+  
+  .moneyListItem.active {
+    background-color: teal;
+  }
+  
+  .moneyListItemNumber {
+    width: 30%;
+    font-size: 18px;
+    font-weight: 100;
+  }
+  
+  .moneyListItemAmount {
+    font-size: 20px;
+    font-weight: 300;
+  }
+  
+  .top {
+    height: 50%;
+    position: relative;
+  }
+  
+  .timer {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    border: 5px solid white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    bottom: 10px;
+    left: 80px;
+    font-size: 30px;
+    font-weight: 700;
+  }
+  
+  .bottom {
+    height: 50%;
+  }
+  
+  .quiz {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+  }
+  
+  .question {
+    width: 80%;
+    background: linear-gradient(#100241, black);
+    text-align: center;
+    padding: 20px;
+    border-radius: 10px;
+    border: 2px solid white;
+    font-size: 20px;
+  }
+  
+  .answers {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  
+  .answer {
+    width: 40%;
+    padding: 10px;
+    margin: 0 10px 20px 10px;
+    text-align: center;
+    background: linear-gradient(#0e0124, #22074d);
+    border: 1px solid white;
+    border-radius: 15px;
+    font-weight: 300;
+    font-size: 20px;
+    cursor: pointer;
+  }
+  
+  .answer:hover,
+  .answer.active {
+    background: mediumblue;
+  }
+  
+  .answer.correct {
+    animation: correct 3s ease forwards;
+  }
+  
+  @keyframes correct {
+    0%,
+    22%,
+    42% {
+      background: mediumblue;
+    }
+    20%,
+    40%,
+    60% {
+      background: linear-gradient(#0e0124, #22074d);
+    }
+    62%,
+    100% {
+      background: green;
+    }
+  }
+  
+  .answer.wrong {
+    animation: wrong 3s ease forwards;
+  }
+  
+  @keyframes wrong {
+    0%,
+    22%,
+    42% {
+      background: mediumblue;
+    }
+    20%,
+    40%,
+    60% {
+      background: linear-gradient(#0e0124, #22074d);
+    }
+    62%,
+    100% {
+      background: red;
+    }
+  }
+  
+  .endText {
+    position: relative;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+  }
+  
+  .start {
+   
+    width: 45%;
+    height:55%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* justify-content: space-around; */
+    position: relative;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    box-shadow: 5px 6px 15px 0 rgb(0, 0, 0);
+    border-radius: 20px;
+    background: linear-gradient(to right, rgba(255, 255, 0,.4), rgb(1, 1, 1,.4));
+    
+  }
+  .start h1{
+    margin-top: 50px;
+    margin-bottom: 50px;
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 30px;
+    color: rgb(53, 54, 55);
+    background: linear-gradient(to right, rgba(0, 183, 255, 0.5),rgba(117, 246, 47, 0.5));
+     text-transform: uppercase;
+     box-shadow: 5px 7px 15px 0 rgb(255, 255, 255);
+     border: none;
+  }
+  .start h1:hover{
+    background: linear-gradient(to right,rgba(53, 177, 226,.5),rgba(214, 56, 56, 0.5));
+    
+  }
+  
+  .startInput {
+    
+    width: 30%;
+    height:50px;
+    border: none;
+    border-radius: 5px;
+    text-align: center;
+    color: black;
+    font-size: 18px;
+    margin-top: 0;
+    box-shadow: 5px 6px 15px 0 rgb(0, 0, 0);
+    margin-bottom: 20px;
+    background: linear-gradient(to left, rgba(255, 255, 0,.4), rgb(1, 1, 1,.4));
+    
+  }
+  .startInput:hover{
+    border: 3px solid rgba(0, 0, 0, 0.6);
+    width: 45%;
+    border-radius:15px ;
+    transition: .1s;
+
+  }
+  .startInput::placeholder{
+    color: white;
+  }
+  
+  .startInput:focus {
+    outline: none;
+  }
+  
+  .startButton {
+    width: 20%;
+    height: 40px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: 500;
+    background:rgb(194, 183, 202) ;
+    box-shadow: 5px 5px 15px 0 black;
+  }
+  .startButton:hover{
+    width: 35%;
+    background: linear-gradient(to right,rgba(53, 177, 226,.7),rgba(214, 56, 56, 0.7));
+
+     transition:.3s;
+  }
+
